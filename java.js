@@ -18,7 +18,12 @@ var board = {
 
 function startGame () {
 
-  createboard(6,6);
+  var boardWidth = prompt("Set your board size! Enter a number between 3 and 6");
+
+  while (boardWidth < 3 || boardWidth > 6 || boardWidth === null || boardWidth === NaN) {
+    boardWidth = prompt("No, a number between 3 and 6!");
+  };
+  createboard(boardWidth, boardWidth);
 
   for (var i = 0; i < board.cells.length; i++) {
     board.cells[i].surroundingMines = countSurroundingMines(board.cells[i]);

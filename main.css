@@ -1,0 +1,7 @@
+.board div {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  margin: 3px;
+  display: flex;
+}
